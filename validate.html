@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation form</title>
+    <script>
+        function validat(){
+            var name=document.myform.name.value;
+            var password=document.myform.password.value;
+            if ( name == "" ||  name == null ){
+                alert("name cant be blAnk");
+                return false;
+            }
+            else if(password.length<6){
+                alert("paswword must me atkleast 6 char");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" action="name.html" method="post" onSubmit="return validat()">
+        name:<input type="text" name="name"><br>
+        password<input type="text" name="password"><br>
+        <input type="submit" value="register">
+    </form>
+</body>
+</html>
